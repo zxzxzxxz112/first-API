@@ -7,6 +7,11 @@ todos = [
     {"id": 2, "task": "學 Flask"},
 ]
 
+@app.route("/")
+def home():
+    return "API is running!"
+
+
 @app.route("/todos", methods=["GET"]) #路由（Route）
 def get_todos():
     return jsonify(todos) #把一個 Python 字典（{"message": "..."}）轉換成 JSON 格式
