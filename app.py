@@ -1,6 +1,8 @@
 from flask import Flask,request,  jsonify
+from flask_cors import CORS
 
 app = Flask(__name__) #Python 的特殊變數，讓 Flask 知道你這支檔案是「主程式」
+CORS(app)
 
 todos = [
     {"id": 1, "task": "買早餐"},
